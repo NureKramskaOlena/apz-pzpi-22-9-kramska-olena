@@ -1,0 +1,44 @@
+public interface IButton
+{
+    void Render();
+}
+
+public class WindowsButton : IButton
+{
+    public void Render() => Console.WriteLine("Rendering Windows Button");
+}
+
+public class MacButton : IButton
+{
+    public void Render() => Console.WriteLine("Rendering Mac Button");
+}
+
+public abstract class Dialog
+{
+    public void RenderWindow()
+    {
+        IButton okButton = CreateButton();
+        okButton.Render();
+    }
+
+    public abstract IButton CreateButton();
+}
+
+public class WindowsDialog : Dialog
+{
+    public override IButton CreateButton() => new WindowsButton();
+}
+
+public class MacDialog : Dialog
+{
+    public override IButton CreateButton() => new MacButton();
+}
+
+class Program
+{
+    static void Main()
+    {
+        Dialog dialog = new WindowsDialog();
+        dialog.RenderWindow();
+    }
+}
