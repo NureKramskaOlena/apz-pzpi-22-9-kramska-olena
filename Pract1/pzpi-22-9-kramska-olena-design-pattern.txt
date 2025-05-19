@@ -135,6 +135,7 @@
  
 ДОДАТОК В
 Програмний код
+
 public interface IButton
 {
     void Render();
