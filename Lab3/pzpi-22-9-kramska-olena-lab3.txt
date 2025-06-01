@@ -1,0 +1,139 @@
+Міністерство освіти і науки України
+Харківський національний університет радіоелектроніки
+
+Кафедра програмної інженерії
+
+
+
+
+
+ЗВІТ
+з лабораторної роботи №3
+з дисципліни «Архітектура програмного забезпечення»
+з теми «Розробка Web-застосунку»
+
+
+
+
+
+
+Виконала:                                                                                        Перевірив:
+ст. гр. ПЗПІ-22-9                                                                             Дашенков Д. С.
+Крамська Олена
+
+
+
+
+
+
+
+Харків 2025
+3 WEB ЗАСТОСУНОК
+
+1. Мета роботи
+Розробити front-end частину програмної системи
+
+2. Хід роботи
+2.1	Опис прийнятих інженерних рішень
+В якості технології обрано React.js з використанням Vite. Для маршрутизації сторінок використано react-router-dom, що забезпечує плавну навігацію між інтерфейсами. Стан застосунку керується через useState та useEffect, без використання глобального state-менеджменту.
+Інтернаціоналізація реалізована через i18next з підтримкою української та англійської мов.
+Ролі користувачів власник та оператор реалізовано через ключ role у localStorage, що визначає доступ до функціоналу.
+Комунікація з сервером відбувається через fetch() API з JWT-токеном у заголовку Authorization.
+Формат дати та часу адаптується до мови браузера за допомогою toLocaleString().
+
+2.2 Опис взаємодії компонентів web-застосунку одне з одним та з іншими елементами системи
+Веб-застосунок побудований за принципом модульності, де кожен компонент відповідає за окрему частину логіки. Всі компоненти взаємодіють із бекендом через REST API, надсилаючи та отримуючи дані у форматі JSON. Дані оновлюються динамічно без перезавантаження сторінки. Авторизація користувача здійснюється на рівні клієнта, через перевірку наявності токену та ролі в localStorage. LanguageSwitcher  відповідає за зміну мови інтерфейсу.
+
+TopBar це глобальний хедер, що відображає назву системи, ім’я користувача, кнопку виходу та перемикач мови.
+Dashboard це головна сторінка, яка відображає доступні модулі у вигляді плиток згідно з роллю користувача.
+Employees є адміністраторським інтерфейсом для додавання, редагування та видалення користувачів системи.
+Recipes, Reports, Sensors, Containers це окремі модулі з повноцінним CRUD-функціоналом та інтерфейсом, які взаємодіють з відповідними API-ендпоінтами.
+
+3. Фрагменти програмного коду
+1) Перемикач мов
+import { useTranslation } from 'react-i18next';
+
+const LanguageSwitcher = () => {
+  const { i18n } = useTranslation();
+
+  return (
+    <div className="lang-switcher-topbar">
+      <button onClick={() => i18n.changeLanguage('uk')}>UA</button>
+      <button onClick={() => i18n.changeLanguage('en')}>ENG</button>
+    </div>
+  );
+};
+
+export default LanguageSwitcher;
+
+2) Вивід рецептів
+     {recipes.map((r) => (
+          <div key={r.recipe_id} className="user-row">
+            <div>
+              <div style={{ fontWeight: 'bold', fontSize: '16px' }}>{r.name}</div>
+              <div style={{ fontSize: '14px', color: '#ccc' }}>{r.description}</div>
+              <div style={{ fontSize: '13px', marginTop: '4px' }}>
+                {t('details.temp')}: <b>{r.target_temp}°C</b> | {t('details.sugar')}: <b>{r.target_sugar}%</b> | {t('details.alcohol')}: <b>{r.target_alcohol}%</b><br />
+                {t('details.container')}: <b>{r.container_name ?? '—'}</b> — {r.container_location ?? t('details.unknown_location')}
+              </div>
+            </div>
+
+            {userId === 1 && (
+              <div className="user-buttons">
+                <button className="btn" onClick={() => {
+                  setEditingId(r.recipe_id);
+                  setName(r.name);
+                  setDescription(r.description);
+                  setTargetTemp(r.target_temp);
+                  setTargetSugar(r.target_sugar);
+                  setTargetAlcohol(r.target_alcohol);
+                  setContainerId(r.container_id);
+                }}>
+                  {t('buttons.update')}
+                </button>
+                <button className="btn" onClick={() => handleDelete(r.recipe_id)}>
+                  {t('buttons.delete')}
+                </button>
+              </div>
+            )}
+          </div>
+        ))}
+;
+
+3) Створення нового оператора
+     <div className="register-container">
+      <div className="card form-card">
+        <h2>{isEditing ? t('title.update_operator') : t('title.register_worker')}</h2>
+        <input
+          type="text"
+          placeholder={t('form.username')}
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
+        <input
+          type="password"
+          placeholder={t('form.password')}
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <button onClick={isEditing ? handleUpdate : handleRegister}>
+          {isEditing ? t('buttons.update') : t('buttons.register')}
+        </button>
+      </div>
+
+
+4. Графічні ілюстрації (рисунки)
+- UML діаграму прецедентів (Use Case Diagram); 
+ 
+Рисунок 1 – Use Case Diagram
+
+- UML діаграму компонент (Component Diagram); 
+ 
+Рисунок 2 – Component Diagram
+- UML діаграму діяльності (Activity Diagram); 
+ 
+Рисунок 3 – Activity Diagram
+- UML діаграму станів (State Diagram).
+ 
+Рисунок 4 – State Diagram
+Висновки: на поточній лабораторній роботі було розробити front-end частину програмної системи виноробні за допомогою React+Vite.

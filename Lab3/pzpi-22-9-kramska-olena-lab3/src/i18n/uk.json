@@ -1,0 +1,117 @@
+{
+  "login_title": "Вхід до системи",
+  "username": "Логін",
+  "password": "Пароль",
+  "submit": "Увійти",
+"user": {
+  "default": "Користувач"
+},
+  "dashboard": {
+    "employees": "Працівники",
+    "manage_employees": "Додати та керувати операторами",
+    "recipes": "Рецепти",
+    "tech_wine": "Список технологій та вин",
+    "reports": "Звіти",
+    "view_analytics": "Перегляд аналітики",
+    "sensors": "Сенсори",
+    "env_status": "Стан температури, вологості тощо",
+    "containers": "Ємності",
+    "manage_containers": "Список та керування ємностями"
+  },
+
+  "title": {
+    "register_worker": "Реєстрація працівника",
+    "update_operator": "Оновлення оператора",
+    "operators": "Оператори",
+    "new_recipe": "Новий рецепт",
+    "update_recipe": "Оновлення рецепту",
+    "new_report": "Новий звіт",
+    "new_sensor": "Новий сенсор",
+    "new_container": "Нова ємність",
+    "edit_container": "Редагувати ємність"
+  },
+
+  "form": {
+    "username": "Логін",
+    "password": "Пароль",
+    "name": "Назва",
+    "description": "Опис",
+    "temp": "Температура",
+    "sugar": "Цукор",
+    "alcohol": "Алкоголь",
+    "container_id": "ID контейнера",
+    "report_name": "Назва",
+    "report_content": "Вміст звіту",
+    "select_recipe": "Оберіть рецепт",
+    "select_container": "Оберіть ємність",
+    "sensor_name": "Назва",
+    "select_type": "Оберіть тип",
+    "temperature": "Температурний",
+    "sugar_sensor": "Цукровий",
+    "alcohol_sensor": "Спиртовий",
+    "location": "Локація",
+    "capacity": "Обʼєм"
+  },
+
+  "buttons": {
+     "logout": "Вийти",
+    "register": "Зареєструвати",
+    "add": "Додати",
+    "update": "Оновити",
+    "delete": "Видалити",
+    "download": "Завантажити",
+    "edit": "Редагувати",
+    "cancel": "Скасувати",
+    "expand": "▼ розгорнути",
+    "collapse": "▲ згорнути"
+  },
+
+  "alerts": {
+    "added": "Додано",
+    "updated": "Оператора оновлено",
+    "deleted": "Користувача видалено",
+    "error_add": "Помилка при створенні",
+    "error_update": "Помилка при оновленні",
+    "error_delete": "Помилка при видаленні",
+    "server_error": "Помилка підключення до сервера",
+    "refresh_error": "Помилка при оновленні списку користувачів",
+
+    "owner_only_edit": "Тільки власник може змінювати рецепти",
+    "owner_only_delete": "Тільки власник може видаляти рецепти",
+    "recipe_added": "Рецепт додано",
+    "recipe_updated": "Рецепт оновлено",
+    "recipe_deleted": "Рецепт видалено",
+
+    "fill_all": "Заповніть усі поля!",
+    "report_created": "Звіт створено!",
+    "report_deleted": "Звіт видалено",
+    "report_error": "Помилка створення звіту",
+    "confirm_delete": "Точно видалити цей звіт?",
+
+    "sensor_added": "Сенсор додано",
+    "sensor_deleted": "Сенсор успішно видалено",
+    "add_error": "Помилка додавання",
+
+    "container_added": "Ємність додано",
+    "container_updated": "Ємність оновлено",
+    "container_deleted": "Ємність видалено",
+    "save_error": "Помилка при збереженні",
+    "confirm_delete_container": "Ви впевнені, що хочете видалити цю ємність?"
+  },
+
+  "details": {
+    "temp": "Температура",
+    "sugar": "Цукор",
+    "alcohol": "Алкоголь",
+    "container": "Контейнер",
+    "recipe": "Рецепт",
+    "volume": "Обʼєм",
+    "created_at": "Створено",
+    "author": "Автор",
+    "content": "Вміст",
+    "type": "Тип",
+    "location": "Локація",
+    "unknown_location": "Невідома локація",
+    "unknown": "Невідомо"
+  }
+}

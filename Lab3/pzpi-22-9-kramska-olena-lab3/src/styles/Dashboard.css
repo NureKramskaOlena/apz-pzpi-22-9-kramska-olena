@@ -1,0 +1,36 @@
+.dashboard {
+  text-align: center;
+  color: white;
+  padding: 40px;
+  margin-top: 0;
+}
+
+
+.tiles {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px; 
+  flex-wrap: wrap;
+}
+
+
+.tile {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  padding: 30px;
+  width: 220px;
+  height: 160px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tile:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+}

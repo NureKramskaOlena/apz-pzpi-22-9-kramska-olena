@@ -1,0 +1,117 @@
+{
+  "login_title": "System Login",
+  "username": "Username",
+  "password": "Password",
+  "submit": "Sign In",
+"user": {
+  "default": "User"
+},
+  "dashboard": {
+    "employees": "Employees",
+    "manage_employees": "Add and manage operators",
+    "recipes": "Recipes",
+    "tech_wine": "Technologies and wines list",
+    "reports": "Reports",
+    "view_analytics": "Analytics overview",
+    "sensors": "Sensors",
+    "env_status": "Temperature, humidity status etc.",
+    "containers": "Containers",
+    "manage_containers": "List and manage containers"
+  },
+
+  "title": {
+    "register_worker": "Register Worker",
+    "update_operator": "Update Operator",
+    "operators": "Operators",
+    "new_recipe": "New Recipe",
+    "update_recipe": "Update Recipe",
+    "new_report": "New Report",
+    "new_sensor": "New Sensor",
+    "new_container": "New Container",
+    "edit_container": "Edit Container"
+  },
+
+  "form": {
+    "username": "Username",
+    "password": "Password",
+    "name": "Name",
+    "description": "Description",
+    "temp": "Temperature",
+    "sugar": "Sugar",
+    "alcohol": "Alcohol",
+    "container_id": "Container ID",
+    "report_name": "Name",
+    "report_content": "Report content",
+    "select_recipe": "Select recipe",
+    "select_container": "Select container",
+    "sensor_name": "Name",
+    "select_type": "Select type",
+    "temperature": "Temperature",
+    "sugar_sensor": "Sugar",
+    "alcohol_sensor": "Alcohol",
+    "location": "Location",
+    "capacity": "Capacity"
+  },
+
+  "buttons": {
+     "logout": "Logout",
+    "register": "Register",
+    "add": "Add",
+    "update": "Update",
+    "delete": "Delete",
+    "download": "Download",
+    "edit": "Edit",
+    "cancel": "Cancel",
+    "expand": "▼ expand",
+    "collapse": "▲ collapse"
+  },
+
+  "alerts": {
+    "added": "Successfully added",
+    "updated": "Operator updated",
+    "deleted": "User deleted",
+    "error_add": "Error while creating",
+    "error_update": "Error while updating",
+    "error_delete": "Error while deleting",
+    "server_error": "Server connection error",
+    "refresh_error": "Error while refreshing user list",
+
+    "owner_only_edit": "Only the owner can modify recipes",
+    "owner_only_delete": "Only the owner can delete recipes",
+    "recipe_added": "Recipe added",
+    "recipe_updated": "Recipe updated",
+    "recipe_deleted": "Recipe deleted",
+
+    "fill_all": "Please fill in all fields!",
+    "report_created": "Report created!",
+    "report_deleted": "Report deleted",
+    "report_error": "Failed to create report",
+    "confirm_delete": "Are you sure you want to delete this report?",
+
+    "sensor_added": "Sensor added",
+    "sensor_deleted": "Sensor successfully deleted",
+    "add_error": "Error while adding",
+
+    "container_added": "Container added",
+    "container_updated": "Container updated",
+    "container_deleted": "Container deleted",
+    "save_error": "Error while saving",
+    "confirm_delete_container": "Are you sure you want to delete this container?"
+  },
+
+  "details": {
+    "temp": "Temperature",
+    "sugar": "Sugar",
+    "alcohol": "Alcohol",
+    "container": "Container",
+    "recipe": "Recipe",
+    "volume": "Volume",
+    "created_at": "Created at",
+    "author": "Author",
+    "content": "Content",
+    "type": "Type",
+    "location": "Location",
+    "unknown_location": "Unknown location",
+    "unknown": "Unknown"
+  }
+}
