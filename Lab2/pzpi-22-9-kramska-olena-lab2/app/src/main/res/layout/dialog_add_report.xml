@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/dialog_background"
+    android:minWidth="350dp">
+
+    <EditText
+        android:id="@+id/inputReportName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:padding="12dp"
+        android:hint="Назва звіту"
+        android:textColorHint="#AAAAAA"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#FFFFFF"
+        android:inputType="textCapWords"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/inputReportContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="80dp"
+        android:padding="12dp"
+        android:hint="Зміст"
+        android:textColorHint="#AAAAAA"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#FFFFFF"
+        android:inputType="textCapSentences|textMultiLine"
+        android:gravity="top"
+        android:layout_marginBottom="16dp" />
+
+    <Spinner
+        android:id="@+id/recipeSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:background="@drawable/card_border_white"
+        android:layout_marginBottom="16dp" />
+
+    <Spinner
+        android:id="@+id/containerSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:background="@drawable/card_border_white"
+        android:layout_marginBottom="24dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end">
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Скасувати"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/outline_button"
+            android:minWidth="100dp" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Зберегти"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/outline_button"
+            android:layout_marginStart="16dp"
+            android:minWidth="100dp" />
+    </LinearLayout>
+</LinearLayout>
